@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogue>
+    <companies>
+        <company>
+            <name></name>
+            <industry></industry>
+            <establishmentYear></establishmentYear>
+            <numberOfEmployees></numberOfEmployees>
+            <address></address>
+            <technologies>
+                <technology>
+                </technology>
+            </technologies>
+            <products>
+                <product>
+                </product>
+            </products>
+            <images>
+                <image />
+            </images>
+        </company>
+    </companies>
+
+    <regions>
+        <region>
+            <country></country>
+            <municipality></municipality>
+            <city></city>
+        </region>
+    </regions>
+</catalogue>
+
