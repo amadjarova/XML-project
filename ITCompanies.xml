@@ -7,25 +7,74 @@
             <establishmentYear></establishmentYear>
             <numberOfEmployees></numberOfEmployees>
             <address></address>
-            <technologies>
-                <technology>
-                </technology>
-            </technologies>
+            <programmingLanguages>
+                <programmingLanguage>
+                </programmingLanguage>
+            </programmingLanguages>
             <products>
                 <product>
                 </product>
             </products>
             <images>
-                <image />
+                <image></image>
+            </images>
+        </company>
+        <company id="company1" region="region1">
+            <name>SAP Labs Bulgaria</name>
+            <industry>Enterprise Software and Cloud Computing</industry>
+            <establishmentYear>2000</establishmentYear>
+            <numberOfEmployees>1500</numberOfEmployees>
+            <address>Srebarna 16 1407 Sofia, Bulgaria</address>
+            <programmingLanguages>
+                <programmingLanguage>ABAP</programmingLanguage>
+                <programmingLanguage>Java</programmingLanguage>
+                <programmingLanguage>Go</programmingLanguage>
+                <programmingLanguage>C++</programmingLanguage>
+                <programmingLanguage>Python</programmingLanguage>
+                <programmingLanguage>Java Script</programmingLanguage>
+                <programmingLanguage>SQL</programmingLanguage>
+                <programmingLanguage>HTML/CSS</programmingLanguage>
+                <programmingLanguage>Ruby</programmingLanguage>
+                <programmingLanguage>R</programmingLanguage>
+            </programmingLanguages>
+            <products>
+                <product>SAP S/4HANA</product>
+                <product>SAP Business Technology Platform</product>
+                <product>SAP SuccessFactors</product>
+                <product>SAP Ariba</product>
+            </products>
+            <images>
+                <image>https://www.bing.com/images/search?view=detailV2&ccid=4QxFrCs4&id=467FB8505AF01A4223379E7944929452D47CB9CC&thid=OIP.4QxFrCs4MCUX7tK7SYWePwAAAA&mediaurl=https%3A%2F%2Fwww.dynamicpoint.com%2Fwp-content%2Fuploads%2F2021%2F03%2FSAP-Logo.jpg&exph=150&expw=400&q=sap+bulgaria+address&simid=608045345717551216&form=IRPRST&ck=5A60171B5A782F8BBF79A74D88A9B9ED&selectedindex=1&itb=0&cw=1375&ch=664&ajaxhist=0&ajaxserp=0&cdnurl=https%3A%2F%2Fth.bing.com%2Fth%2Fid%2FR.e10c45ac2b38302517eed2bb49859e3f%3Frik%3DzLl81FKUkkR5ng%26pid%3DImgRaw%26r%3D0&pivotparams=insightsToken%3Dccid_cxmNPsmm*cp_10B1248F2A4CFC03126E3E493ABB9246*mid_F29FB20735893F7689C17F585433C832CF9A2D73*simid_607998118276501841*thid_OIP.cxmNPsmmgiUl5eQTyakFowHaEe&vt=0&sim=11&iss=VSI&ajaxhist=0&ajaxserp=0</image>
+                <image>https://www.bing.com/images/search?view=detailV2&ccid=Z7UC9hpP&id=2A3CF0F645AAF40F1479F692B5E0651E1D89D771&thid=OIP.Z7UC9hpPtYcZtTM4rkuhSgHaE8&mediaurl=https%3A%2F%2Fmedia.licdn.com%2Fdms%2Fimage%2FD4E12AQHVvz5Kt0s_NA%2Farticle-cover_image-shrink_720_1280%2F0%2F1681288124765%3Fe%3D2147483647%26v%3Dbeta%26t%3DbazspoOlZ8Tp7BUrAhWMVVyXJ9BCEi-e9EQQ6vdy9Pk&cdnurl=https%3A%2F%2Fth.bing.com%2Fth%2Fid%2FR.67b502f61a4fb58719b53338ae4ba14a%3Frik%3DcdeJHR5l4LWS9g%26pid%3DImgRaw%26r%3D0&exph=720&expw=1078&q=sap+bulgaria+address&simid=608038873199283138&FORM=IRPRST&ck=2602D7575E776DF5689EADF86C430B94&selectedIndex=1&itb=0&cw=1375&ch=664&ajaxhist=0&ajaxserp=0</image>
             </images>
         </company>
     </companies>
 
     <regions>
-        <region>
-            <country></country>
-            <municipality></municipality>
-            <city></city>
+        <region id="region1">
+            <country>Bulgaria</country>
+            <municipality>Sofia Province</municipality>
+            <city>Sofia</city>
+        </region>
+        <region id="region2">
+            <country>Bulgaria</country>
+            <municipality>Plovdiv Province</municipality>
+            <city>Plovdiv</city>
+        </region>
+        <region id="region3">
+            <country>Bulgaria</country>
+            <municipality>Sofia Province</municipality>
+            <city>Sofia</city>
+        </region>
+        <region id="region4">
+            <country>Bulgaria</country>
+            <municipality>Varna Province</municipality>
+            <city>Varna</city>
+        </region>
+        <region id="region5">
+            <country>Bulgaria</country>
+            <municipality>Burgas Province</municipality>
+            <city>Burgas</city>
         </region>
     </regions>
 </catalogue>
