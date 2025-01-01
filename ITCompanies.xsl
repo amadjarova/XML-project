@@ -1,107 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    <xsl:output method="html" encoding="UTF-8" indent="yes" />
-    
+    <xsl:output method="html" encoding="UTF-8" />
     <xsl:template match="/">
         <html>
             <head>
-                <title>Catalogue of Companies</title>
+                <title>Списък на ИТ компании в България</title>
                 <style>
                     body {
                         font-family: Arial, sans-serif;
                         margin: 20px;
+                        background-color: #f4f4f4;
                     }
                     h1 {
-                        text-align: center;
-                        color: #333;
+                        color: #2a5d84;
                     }
-                    table {
-                        width: 100%;
-                        border-collapse: collapse;
+                    .company {
+                        background-color: #ffffff;
+                        padding: 15px;
+                        margin-bottom: 20px;
+                        border-radius: 8px;
+                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
                     }
-                    th, td {
-                        border: 1px solid #ddd;
-                        padding: 8px;
-                        text-align: left;
+                    .company h2 {
+                        margin-top: 0;
                     }
-                    th {
-                        background-color: #f4f4f4;
-                        cursor: pointer;
+                    .company img {
+                        max-width: 100%;
+                        height: auto;
+                        margin-top: 10px;
                     }
-                    th a {
-                        text-decoration: none;
-                        color: #000;
+                    .company-details {
+                        margin-top: 15px;
+                    }
+                    .company-details div {
+                        margin-bottom: 8px;
+                    }
+                    .sort-options {
+                        margin-bottom: 20px;
                     }
                 </style>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        // Функция за сортиране по име
+                        function sortByName() {
+                            const companies = Array.from(document.querySelectorAll(".company"));
+                            companies.sort((a, b) => {
+                                const nameA = a.querySelector("h2").textContent.toUpperCase();
+                                const nameB = b.querySelector("h2").textContent.toUpperCase();
+                                return nameA.localeCompare(nameB);
+                            });
+                            const container = document.getElementById("company-list");
+                            companies.forEach(company => container.appendChild(company));
+                        }
+
+                        // Функция за сортиране по индустрия
+                        function sortByIndustry() {
+                            const companies = Array.from(document.querySelectorAll(".company"));
+                            companies.sort((a, b) => {
+                                const industryA = a.querySelector(".industry").textContent.toUpperCase();
+                                const industryB = b.querySelector(".industry").textContent.toUpperCase();
+                                return industryA.localeCompare(industryB);
+                            });
+                            const container = document.getElementById("company-list");
+                            companies.forEach(company => container.appendChild(company));
+                        }
+
+                        // Свързване на бутоните със събития
+                        document.getElementById("sort-name").addEventListener("click", sortByName);
+                        document.getElementById("sort-industry").addEventListener("click", sortByIndustry);
+                    });
+                </script>
             </head>
             <body>
-                <h1>Catalogue of Companies</h1>
-                <table id="companyTable">
-                    <thead>
-                        <tr>
-                            <th><a href="javascript:void(0);" onclick="sortTable(0)">Company Name</a></th>
-                            <th><a href="javascript:void(0);" onclick="sortTable(1)">Industry</a></th>
-                            <th><a href="javascript:void(0);" onclick="sortTable(2)">Year Established</a></th>
-                            <th><a href="javascript:void(0);" onclick="sortTable(3)">Number of Employees</a></th>
-                            <th><a href="javascript:void(0);" onclick="sortTable(4)">Address</a></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <xsl:for-each select="/catalogue/companies/company">
-                            <tr>
-                                <td><xsl:value-of select="name" /></td>
-                                <td><xsl:value-of select="industry" /></td>
-                                <td><xsl:value-of select="establishmentYear" /></td>
-                                <td><xsl:value-of select="numberOfEmployees" /></td>
-                                <td><xsl:value-of select="address" /></td>
-                            </tr>
-                        </xsl:for-each>
-                    </tbody>
-                </table>
+                <h1>Списък на ИТ компании в България</h1>
 
-                <script>
-                    function sortTable(n) {
-                        var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-                        table = document.getElementById("companyTable");
-                        switching = true;
-                        dir = "asc"; // Set the sorting direction to ascending initially
+                <!-- Опции за сортиране -->
+                <div class="sort-options">
+                    <button id="sort-name">Сортирай по име</button>
+                    <button id="sort-industry">Сортирай по индустрия</button>
+                </div>
 
-                        while (switching) {
-                            switching = false;
-                            rows = table.rows;
+                <!-- Контейнер за компаниите -->
+                <div id="company-list">
+                    <xsl:for-each select="catalogue/companies/company">
+                        <div class="company">
+                            <h2><xsl:value-of select="name" /></h2>
 
-                            for (i = 1; i < (rows.length - 1); i++) {
-                                shouldSwitch = false;
-                                x = rows[i].getElementsByTagName("TD")[n];
-                                y = rows[i + 1].getElementsByTagName("TD")[n];
+                            <div class="company-details">
+                                <div class="industry"><strong>Индустрия:</strong> <xsl:value-of select="industry" /></div>
+                                <div><strong>Година на основаване:</strong> <xsl:value-of select="establishmentYear" /></div>
+                                <div><strong>Брой служители:</strong> <xsl:value-of select="numberOfEmployees" /></div>
+                                <div><strong>Адрес:</strong> <xsl:value-of select="address" /></div>
+                            </div>
 
-                                if (dir == "asc") {
-                                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                                        shouldSwitch = true;
-                                        break;
-                                    }
-                                } else if (dir == "desc") {
-                                    if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-                                        shouldSwitch = true;
-                                        break;
-                                    }
-                                }
-                            }
+                            <h3>Програмиране езици:</h3>
+                            <ul>
+                                <xsl:for-each select="programmingLanguages/programmingLanguage">
+                                    <li><xsl:value-of select="." /></li>
+                                </xsl:for-each>
+                            </ul>
 
-                            if (shouldSwitch) {
-                                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-                                switching = true;
-                                switchcount++;
-                            } else {
-                                if (switchcount == 0 && dir == "asc") {
-                                    dir = "desc";
-                                    switching = true;
-                                }
-                            }
-                        }
-                    }
-                </script>
+                            <h3>Продукти:</h3>
+                            <ul>
+                                <xsl:for-each select="products/product">
+                                    <li><xsl:value-of select="." /></li>
+                                </xsl:for-each>
+                            </ul>
+
+                            <h3>Изображения:</h3>
+                            <xsl:for-each select="images/image">
+                                <img src="{.}" alt="Company Image" />
+                            </xsl:for-each>
+                        </div>
+                    </xsl:for-each>
+                </div>
             </body>
         </html>
     </xsl:template>
 </xsl:stylesheet>
+
