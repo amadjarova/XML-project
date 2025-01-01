@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="ITCompanies.xsl"?>
-<catalogue xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="ITCompaniesSchema.xsd">
+<catalogue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ITCompaniesSchema.xsd">
     <companies>
         <company id="company1" region="region1">
             <name>EGT Digital</name>
