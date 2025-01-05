@@ -3,66 +3,124 @@
 
     <xs:element name="catalogue">
         <xs:complexType>
-            <xs:sequence>
-                <xs:element name="companies">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="company" maxOccurs="unbounded">
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:element name="name" type="xs:string"/>
-                                        <xs:element name="industry" type="xs:string"/>
-                                        <xs:element name="establishmentYear" type="xs:gYear"/>
-                                        <xs:element name="numberOfEmployees" type="xs:int"/>
-                                        <xs:element name="address" type="xs:string"/>
-                                        <xs:element name="programmingLanguages">
-                                            <xs:complexType>
-                                                <xs:sequence>
-                                                    <xs:element name="programmingLanguage" maxOccurs="unbounded" type="xs:string"/>
-                                                </xs:sequence>
-                                            </xs:complexType>
-                                        </xs:element>
-                                        <xs:element name="products">
-                                            <xs:complexType>
-                                                <xs:sequence>
-                                                    <xs:element name="product" maxOccurs="unbounded" type="xs:string"/>
-                                                </xs:sequence>
-                                            </xs:complexType>
-                                        </xs:element>
-                                        <xs:element name="images">
-                                            <xs:complexType>
-                                                <xs:sequence>
-                                                    <xs:element name="image" maxOccurs="unbounded" type="xs:string"/>
-                                                </xs:sequence>
-                                            </xs:complexType>
-                                        </xs:element>
-                                    </xs:sequence>
-                                    <xs:attribute name="id" type="xs:string" use="required"/>
-                                    <xs:attribute name="region" type="xs:string" use="required"/>
-                                </xs:complexType>
-                            </xs:element>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
-
-                <xs:element name="regions">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="region" maxOccurs="unbounded">
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:element name="country" type="xs:string"/>
-                                        <xs:element name="municipality" type="xs:string"/>
-                                        <xs:element name="city" type="xs:string"/>
-                                    </xs:sequence>
-                                    <xs:attribute name="id" type="xs:string" use="required"/>
-                                </xs:complexType>
-                            </xs:element>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
-            </xs:sequence>
+            <xs:all>
+                <xs:element name="companies" type="companiesType" />
+                <xs:element name="regions" type="regionsType" />
+                <xs:element name="programmingLanguages" type="programmingLanguagesType" />
+            </xs:all>
         </xs:complexType>
+
+        <xs:key name="companyIDKey">
+            <xs:selector xpath="companies/company" />
+            <xs:field xpath="@id" />
+        </xs:key>
+
+        <xs:key name="programmingLanguageIDKey">
+            <xs:selector xpath="programmingLanguages/programmingLanguage" />
+            <xs:field xpath="@id" />
+        </xs:key>
+
+        <xs:key name="regionIDKey">
+            <xs:selector xpath="regions/region" />
+            <xs:field xpath="@id" />
+        </xs:key>
+
+        <xs:keyref name="companyProgrammingLanguageRef" refer="programmingLanguageIDKey">
+            <xs:selector xpath="companies/company/programmingLanguages/programmingLanguage" />
+            <xs:field xpath="@ref" />
+        </xs:keyref>
+
+        <xs:keyref name="companyRegionRef" refer="regionIDKey">
+            <xs:selector xpath="companies/company" />
+            <xs:field xpath="@ref" />
+        </xs:keyref>
     </xs:element>
+
+    <xs:complexType name="companiesType">
+        <xs:sequence>
+            <xs:element name="company" type="companyType" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="regionsType">
+        <xs:sequence>
+            <xs:element name="region" type="regionType" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="programmingLanguagesType">
+        <xs:sequence>
+            <xs:element name="programmingLanguage" type="programmingLanguageType" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="companyType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="industry" type="xs:string"/>
+            <xs:element name="establishmentYearOfFirstOfficeInTheCity" type="yearType" />
+            <xs:element name="numberOfEmployeesInTheCity" type="xs:int"/>
+            <xs:element name="address" type="xs:string"/>
+            <xs:element name="establishmentYearGlobal" type="yearType"/>
+            <xs:element name="numberOfEmployeesGlobal" type="xs:int"/>
+            <xs:element name="centralOffice" type="xs:string"/>
+            <xs:element name="programmingLanguages" type="companyProgrammingLanguagesType" />
+            <xs:element name="products" type="companyProductsType" />
+            <xs:element name="images" type="companyImagesType" />
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required" />
+        <xs:attribute name="region" type="xs:IDREF" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="companyProgrammingLanguagesType">
+        <xs:sequence>
+            <xs:element name="programmingLanguage" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:attribute name="ref" type="xs:IDREF" use="required" />
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="companyProductsType">
+        <xs:sequence>
+            <xs:element name="product" type="xs:string" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="companyImagesType">
+        <xs:sequence>
+            <xs:element name="image" type="imageType" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="yearType">
+        <xs:restriction base="xs:nonNegativeInteger">
+            <xs:minInclusive value="1800"/>
+            <xs:maxInclusive value="2025"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="imageType">
+        <xs:attribute name="src" type="xs:anyURI" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="regionType">
+        <xs:sequence>   
+            <xs:element name="country" type="xs:string"/>
+            <xs:element name="municipality" type="xs:string"/>
+            <xs:element name="city" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="programmingLanguageType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="mainUsage" type="xs:string"/>
+            <xs:element name="yearOfCreation" type="yearType"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required" />
+    </xs:complexType>
 </xs:schema>
 
