@@ -1,41 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="ITCompanies.xsl"?>
+<?xml-stylesheet href="ITCompanies.xsl" type="text/xsl"?>
+<!DOCTYPE catalogue [
+<!NOTATION png PUBLIC "image/png">
+<!NOTATION jpg PUBLIC "image/jpeg">
+<!ENTITY egt-office-pic PUBLIC "egt-office-pic-identifier" "https://www.egt.com/wp-content/uploads/2022/09/egt-single-post.jpg" NDATA jpg>
+<!ENTITY egt-logo-pic PUBLIC "egt-logo-pic-identifier" "https://insider.egt.com/wp-content/uploads/images/logo_egt.png" NDATA png>
+
+<!ENTITY sap-office-pic PUBLIC "sap-office-pic-identifier" "https://agcapital.bg/wp-content/uploads/2020/03/VIP_2507.jpg" NDATA jpg>
+<!ENTITY sap-logo-pic PUBLIC "sap-logo-pic-identifier" "https://logowik.com/content/uploads/images/467_sap.jpg" NDATA jpg>
+
+<!ENTITY amusnet-office-pic PUBLIC "amusnet-office-pic-identifier" "https://officesnapshots.com/wp-content/uploads/2023/03/amusnet-offices-sofia-5.jpg" NDATA jpg>
+<!ENTITY amusnet-logo-pic PUBLIC "amusnet-logo-pic-identifier" "https://images.sigma.world/amusnet-logo.png" NDATA png>
+
+<!ENTITY scaleFocus-office-pic PUBLIC "scaleFocus-office-pic-identifier" "https://design.fusion.bg/wp-content/uploads/sites/4/2020/06/Scale-Focus-Sofia-10.jpg" NDATA jpg>
+<!ENTITY scaleFocus-logo-pic PUBLIC "scaleFocus-logo-pic-identifier" "https://vectorseek.com/wp-content/uploads/2023/10/Scalefocus-Logo-Vector.svg-.png" NDATA png>
+
+<!ENTITY mentormate-office-pic PUBLIC "mentormate-office-pic-identifier" "https://media.glassdoor.com/l/fc/04/08/3d/mentormate-office-lounging-area.jpg" NDATA jpg>
+<!ENTITY mentormate-logo-pic PUBLIC "mentormate-logo-pic-identifier" "https://d3ml3b6vywsj0z.cloudfront.net/company_images/5c3b0494d55ae49f1b7ca142_images.png" NDATA png>
+
+<!ENTITY strypes-logo-pic PUBLIC "strypes-logo-pic-identifier" "https://jobs.ict.eu/sites/werkenbij/files/images/STRYPES_CLEAN_RGB.png" NDATA png>
+
+<!ENTITY technoLogica-logo-pic PUBLIC "technoLogica-logo-pic-identifier" "https://technologica.de/wp-content/uploads/2020/03/technologica-logo-800.png" NDATA png>
+
 <catalogue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ITCompaniesSchema.xsd">
+
     <companies>
         <company id="company1" region="region1">
             <name>EGT Digital</name>
             <industry>Гейминг софтуер</industry>
-            <establishmentYear>2017</establishmentYear>
-            <numberOfEmployees>200</numberOfEmployees>
+            <establishmentYearOfFirstOfficeInTheCity>2017<establishmentYearOfFirstOfficeInTheCity>
+            <numberOfEmployeesInTheCity>200</numberOfEmployeesInTheCity>
             <address>ул. Александър Малинов 85, София</address>
+            <establishmentGlobal>2002</establishmentGlobal>
+            <numberOfEmployeesGlobal>1000</numberOfEmployeesGlobal>
+            <centralOffice>София, България</centralOffice>
             <programmingLanguages>
-                <programmingLanguage>C++</programmingLanguage>
-                <programmingLanguage>Python</programmingLanguage>
-                <programmingLanguage>Java</programmingLanguage>
-                <programmingLanguage>JavaScript</programmingLanguage>
+                <programmingLanguage ref="lang1"/>
+                <programmingLanguage ref="lang2"/>
+                <programmingLanguage ref="lang3"/>
+                <programmingLanguage ref="lang4"/>
             </programmingLanguages>
             <products>
                 <product>Казино платформи</product>
                 <product>Гейминг софтуер</product>
             </products>
-            <images>
-                <image>https://www.egt.com/wp-content/uploads/2022/09/egt-single-post.jpg</image>
-                <image>https://digitalk.bg/shimg/zx952y526_4381275.jpg</image>
-            </images>
+            <image src="egt-logo-pic" />
+            <image src="egt-office-pic" />
         </company>
         <company id="company2" region="region1">
             <name>SAP Labs Bulgaria</name>
             <industry>Корпоративен софтуер</industry>
-            <establishmentYear>2006</establishmentYear>
-            <numberOfEmployees>1500</numberOfEmployees>
+            <establishmentYearOfFirstOfficeInTheCity>2006<establishmentYearOfFirstOfficeInTheCity>
+            <numberOfEmployeesInTheCity>1500</numberOfEmployeesInTheCity>
             <address>ул. Сребърна 16, София</address>
+            <establishmentGlobal>1972</establishmentGlobal>
+            <numberOfEmployeesGlobal>107000</numberOfEmployeesGlobal>
+            <centralOffice>Валдорф, Германия</centralOffice>
             <programmingLanguages>
-                <programmingLanguage>ABAP</programmingLanguage>
-                <programmingLanguage>Java</programmingLanguage>
-                <programmingLanguage>Go</programmingLanguage>
-                <programmingLanguage>C++</programmingLanguage>
-                <programmingLanguage>Python</programmingLanguage>
-                <programmingLanguage>Java Script</programmingLanguage>
+                <programmingLanguage ref="lang5"/>
+                <programmingLanguage ref="lang3"/>
+                <programmingLanguage ref="lang6"/>
+                <programmingLanguage ref="lang1"/>
+                <programmingLanguage ref="lang2"/>
+                <programmingLanguage ref="lang4"/>
             </programmingLanguages>
             <products>
                 <product>SAP S/4HANA</product>
@@ -43,105 +70,110 @@
                 <product>SAP SuccessFactors</product>
                 <product>SAP Ariba</product>
             </products>
-            <images>
-                <image>https://www.bing.com/images/search?view=detailV2&amp;ccid=4QxFrCs4&amp;id=467FB8505AF01A4223379E7944929452D47CB9CC&amp;thid=OIP.4QxFrCs4MCUX7tK7SYWePwAAAA&amp;mediaurl=https%3A%2F%2Fwww.dynamicpoint.com%2Fwp-content%2Fuploads%2F2021%2F03%2FSAP-Logo.jpg&amp;exph=150&amp;expw=400&amp;q=sap+bulgaria+address&amp;simid=608045345717551216&amp;form=IRPRST&amp;ck=5A60171B5A782F8BBF79A74D88A9B9ED&amp;selectedindex=1&amp;itb=0&amp;cw=1375&amp;ch=664&amp;ajaxhist=0&amp;ajaxserp=0&amp;cdnurl=https%3A%2F%2Fth.bing.com%2Fth%2Fid%2FR.e10c45ac2b38302517eed2bb49859e3f%3Frik%3DzLl81FKUkkR5ng%26pid%3DImgRaw%26r%3D0&amp;pivotparams=insightsToken%3Dccid_cxmNPsmm*cp_10B1248F2A4CFC03126E3E493ABB9246*mid_F29FB20735893F7689C17F585433C832CF9A2D73*simid_607998118276501841*thid_OIP.cxmNPsmmgiUl5eQTyakFowHaEe&amp;vt=0&amp;sim=11&amp;iss=VSI&amp;ajaxhist=0&amp;ajaxserp=0</image>
-                <image>https://www.bing.com/images/search?view=detailV2&amp;ccid=Z7UC9hpP&amp;id=2A3CF0F645AAF40F1479F692B5E0651E1D89D771&amp;thid=OIP.Z7UC9hpPtYcZtTM4rkuhSgHaE8&amp;mediaurl=https%3A%2F%2Fmedia.licdn.com%2Fdms%2Fimage%2FD4E12AQHVvz5Kt0s_NA%2Farticle-cover_image-shrink_720_1280%2F0%2F1681288124765%3Fe%3D2147483647%26v%3Dbeta%26t%3DbazspoOlZ8Tp7BUrAhWMVVyXJ9BCEi-e9EQQ6vdy9Pk&amp;cdnurl=https%3A%2F%2Fth.bing.com%2Fth%2Fid%2FR.67b502f61a4fb58719b53338ae4ba14a%3Frik%3DcdeJHR5l4LWS9g%26pid%3DImgRaw%26r%3D0&amp;exph=720&amp;expw=1078&amp;q=sap+bulgaria+address&amp;simid=608038873199283138&amp;FORM=IRPRST&amp;ck=2602D7575E776DF5689EADF86C430B94&amp;selectedIndex=1&amp;itb=0&amp;cw=1375&amp;ch=664&amp;ajaxhist=0&amp;ajaxserp=0</image>
-            </images>
+            <image src="sap-logo-pic" />
+            <image src="sap-office-pic" />
         </company>
         <company id="company3" region="region1">
             <name>Amusnet</name>
             <industry>Гейминг софтуер</industry>
-            <establishmentYear>2012</establishmentYear>
-            <numberOfEmployees>400</numberOfEmployees>
+            establishmentYearOfFirstOfficeInTheCity>2012<establishmentYearOfFirstOfficeInTheCity>
+            <numberOfEmployeesInTheCity>400</numberOfEmployeesInTheCity>
             <address>бул. Цар Освободител 12, София</address>
+            <establishmentGlobal>2008</establishmentGlobal>
+            <numberOfEmployeesGlobal>800</numberOfEmployeesGlobal>
+            <centralOffice>София</centralOffice>
             <programmingLanguages>
-                <programmingLanguage>PHP</programmingLanguage>
-                <programmingLanguage>JavaScript</programmingLanguage>
+                <programmingLanguage ref="lang7"/>
+                <programmingLanguage ref="lang4"/>
             </programmingLanguages>
             <products>
                 <product>Гейминг платформи</product>
                 <product>Казино софтуер</product>
             </products>
-            <images>
-                <image>https://blog.betfirst.be/wp-content/uploads/2024/04/Amusnet_Logo_-1.jpg</image>
-                <image>https://officesnapshots.com/wp-content/uploads/2023/03/amusnet-offices-sofia-5.jpg</image>
-            </images>
+            <image src="amusnet-logo-pic" />
+            <image src="amusnet-office-pic" />
         </company>
         <company id="company4" region="region2">
             <name>ScaleFocus</name>
             <industry>Разработка на софтуер и ИТ услуги</industry>
-            <establishmentYear>2018</establishmentYear>
-            <numberOfEmployees>80</numberOfEmployees>
+            establishmentYearOfFirstOfficeInTheCity>2018<establishmentYearOfFirstOfficeInTheCity>
+            <numberOfEmployeesInTheCity>80</numberOfEmployeesInTheCity>
             <address>ул. Васил Левски 24, Пловдив, България</address>
+            <establishmentGlobal>2012</establishmentGlobal>
+            <numberOfEmployeesGlobal>900</numberOfEmployeesGlobal>
+            <centralOffice>София</centralOffice>
             <programmingLanguages>
-                <programmingLanguage>Java</programmingLanguage>
-                <programmingLanguage>C#</programmingLanguage>
-                <programmingLanguage>Python</programmingLanguage>
-                <programmingLanguage>JavaScript</programmingLanguage>
-                <programmingLanguage>Ruby</programmingLanguage>
+                <programmingLanguage ref="lang3"/>
+                <programmingLanguage ref="lang8"/>
+                <programmingLanguage ref="lang2"/>
+                <programmingLanguage ref="lang4"/>
+                <programmingLanguage ref="lang9"/>
             </programmingLanguages>
             <products>
                 <product>Софтуерни решения за автоматизация</product>
                 <product>Услуги за облачни технологии</product>
                 <product>Мобилни и веб приложения</product>
             </products>
-            <images>
-                <image>https://www.scalefocus.com/wp-content/uploads/2022/11/ScaleFocus-Logo.svg</image>
-            </images>
+            <image src="scaleFocus-logo-pic" />
+            <image src="scaleFocus-office-pic" />
         </company>
         <company id="company5" region="region2">
             <name>Mentormate</name>
             <industry>Софтуерни услуги</industry>
-            <establishmentYear>2014</establishmentYear>
-            <numberOfEmployees>150</numberOfEmployees>
+            establishmentYearOfFirstOfficeInTheCity>2014<establishmentYearOfFirstOfficeInTheCity>
+            <numberOfEmployeesInTheCity>150</numberOfEmployeesInTheCity>
             <address>ул. Иван Вазов 21, Пловдив</address>
+            <establishmentGlobal>2001</establishmentGlobal>
+            <numberOfEmployeesGlobal>600</numberOfEmployeesGlobal>
+            <centralOffice>Минесота, САЩ</centralOffice>
             <programmingLanguages>
-                <programmingLanguage>React</programmingLanguage>
-                <programmingLanguage>.NET</programmingLanguage>
+                <programmingLanguage ref="lang10"/>
+                <programmingLanguage ref="lang11"/>
             </programmingLanguages>
             <products>
                 <product>Уеб приложения</product>
                 <product>Мобилни приложения</product>
             </products>
-            <images>
-                <image>https://th.bing.com/th/id/OIP.8czdb-QZI8qPye5ueA_KgAHaCe?rs=1&amp;pid=ImgDetMain</image>
-            </images>
+            <image src="mentormate-logo-pic" />
+            <image src="mentormate-office-pic" />
         </company>
         <company id="company6" region="region4">
             <name>ICT Strypes</name>
             <industry>ИТ услуги и аутсорсинг</industry>
-            <establishmentYear>2021</establishmentYear>
-            <numberOfEmployees>100</numberOfEmployees>
+            establishmentYearOfFirstOfficeInTheCity>2021<establishmentYearOfFirstOfficeInTheCity>
+            <numberOfEmployeesInTheCity>100</numberOfEmployeesInTheCity>
             <address>ул. Владислав Варненчик 120, Варна</address>
+            <establishmentGlobal>1997</establishmentGlobal>
+            <numberOfEmployeesGlobal>500</numberOfEmployeesGlobal>
+            <centralOffice>Варна, България</centralOffice>
             <programmingLanguages>
-                <programmingLanguage>C++</programmingLanguage>
-                <programmingLanguage>Python</programmingLanguage>
+                <programmingLanguage ref="lang1"/>
+                <programmingLanguage ref="lang2"/>
             </programmingLanguages>
             <products>
                 <product>ИТ услуги</product>
                 <product>Софтуерни решения</product>
             </products>
-            <images>
-                <image>https://jobs.ict.eu/sites/werkenbij/files/images/STRYPES_CLEAN_RGB.png</image>
-            </images>
+            <image src="strypes-logo-pic" />
         </company>
         <company id="company7" region="region5">
             <name>TechnoLogica</name>
             <industry>ИТ консултации и разработки</industry>
-            <establishmentYear>2013</establishmentYear>
-            <numberOfEmployees>50</numberOfEmployees>
+            establishmentYearOfFirstOfficeInTheCity>2013<establishmentYearOfFirstOfficeInTheCity>
+            <numberOfEmployeesInTheCity>50</numberOfEmployeesInTheCity>
             <address>ул. Богориди 5, Бургас</address>
+             <establishmentGlobal>1990</establishmentGlobal>
+            <numberOfEmployeesGlobal>400</numberOfEmployeesGlobal>
+            <centralOffice>София, България</centralOffice>
             <programmingLanguages>
-                <programmingLanguage>Java</programmingLanguage>
-                <programmingLanguage>C#</programmingLanguage>
+                <programmingLanguage ref="lang3"/>
+                <programmingLanguage ref="lang8"/>
             </programmingLanguages>
             <products>
                 <product>Корпоративен софтуер</product>
                 <product>ИТ консултации</product>
             </products>
-            <images>
-                <image>https://media.licdn.com/dms/image/v2/C4D0BAQHa_aFM8rfJtA/company-logo_200_200/company-logo_200_200/0/1630572251279/technologica_logo?e=2147483647&amp;v=beta&amp;t=Ly13meHlaWh92waYVnhE7lrHF1J_YN7krQuuhNlsDMw</image>
-            </images>
+            <image src="technoLogica-logo-pic" />
         </company>
     </companies>
 
@@ -167,5 +199,63 @@
             <city>Бургас</city>
         </region>
     </regions>
+
+    <programmingLanguages>
+        <programmingLanguage id="lang1">
+            <name>C++</name>
+            <mainUsage>Системно програмиране, разработка на игри, приложения с висока производителност</mainUsage>
+            <yearOfCreation>1983</yearOfCreation>
+        </programmingLanguage>
+        <programmingLanguage id="lang2">
+            <name>Python</name>
+            <mainUsage>Уеб разработка, анализ на данни, изкуствен интелект, скриптове</mainUsage>
+            <yearOfCreation>1991</yearOfCreation>
+        </programmingLanguage>
+        <programmingLanguage id="lang3">
+            <name>Java</name>
+            <mainUsage>Корпоративни приложения, мобилна разработка, бекенд системи</mainUsage>
+            <yearOfCreation>1995</yearOfCreation>
+        </programmingLanguage>
+        <programmingLanguage id="lang4">
+            <name>JavaScript</name>
+            <mainUsage>Уеб разработка, фронтенд и бекенд скриптове</mainUsage>
+            <yearOfCreation>1995</yearOfCreation>
+        </programmingLanguage>
+        <programmingLanguage id="lang5">
+            <name>ABAP</name>
+            <mainUsage>Софтуер за планиране на корпоративни ресурси (ERP)</mainUsage>
+            <yearOfCreation>1983</yearOfCreation>
+        </programmingLanguage>
+        <programmingLanguage id="lang6">
+            <name>Go</name>
+            <mainUsage>Облачни услуги, разпределени системи, микросервизи</mainUsage>
+            <yearOfCreation>2009</yearOfCreation>
+        </programmingLanguage>
+        <programmingLanguage id="lang7">
+            <name>PHP</name>
+            <mainUsage>Уеб разработка, сървърни скриптове</mainUsage>
+            <yearOfCreation>1995</yearOfCreation>
+        </programmingLanguage>
+        <programmingLanguage id="lang8">
+            <name>C#</name>
+            <mainUsage>Десктоп приложения, разработка на игри, корпоративен софтуер</mainUsage>
+            <yearOfCreation>2000</yearOfCreation>
+        </programmingLanguage>
+        <programmingLanguage id="lang9">
+            <name>Ruby</name>
+            <mainUsage>Уеб разработка, скриптове</mainUsage>
+            <yearOfCreation>1995</yearOfCreation>
+        </programmingLanguage>
+        <programmingLanguage id="lang10">
+            <name>React</name>
+            <mainUsage>Фронтенд уеб разработка, създаване на UI компоненти</mainUsage>
+            <yearOfCreation>2013</yearOfCreation>
+        </programmingLanguage>
+        <programmingLanguage id="lang11">
+            <name>.NET</name>
+            <mainUsage>Корпоративни приложения, облачни услуги, десктоп приложения</mainUsage>
+            <yearOfCreation>2002</yearOfCreation>
+        </programmingLanguage>
+    </programmingLanguages>
 </catalogue>
 
