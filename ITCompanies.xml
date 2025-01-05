@@ -21,6 +21,7 @@
 <!ENTITY strypes-logo-pic PUBLIC "strypes-logo-pic-identifier" "https://jobs.ict.eu/sites/werkenbij/files/images/STRYPES_CLEAN_RGB.png" NDATA png>
 
 <!ENTITY technoLogica-logo-pic PUBLIC "technoLogica-logo-pic-identifier" "https://technologica.de/wp-content/uploads/2020/03/technologica-logo-800.png" NDATA png>
+]>
 
 <catalogue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ITCompaniesSchema.xsd">
 
@@ -28,10 +29,10 @@
         <company id="company1" region="region1">
             <name>EGT Digital</name>
             <industry>Гейминг софтуер</industry>
-            <establishmentYearOfFirstOfficeInTheCity>2017<establishmentYearOfFirstOfficeInTheCity>
+            <establishmentYearOfFirstOfficeInTheCity>2017</establishmentYearOfFirstOfficeInTheCity>
             <numberOfEmployeesInTheCity>200</numberOfEmployeesInTheCity>
             <address>ул. Александър Малинов 85, София</address>
-            <establishmentGlobal>2002</establishmentGlobal>
+            <establishmentYearGlobal>2002</establishmentYearGlobal>
             <numberOfEmployeesGlobal>1000</numberOfEmployeesGlobal>
             <centralOffice>София, България</centralOffice>
             <programmingLanguages>
@@ -44,16 +45,18 @@
                 <product>Казино платформи</product>
                 <product>Гейминг софтуер</product>
             </products>
-            <image src="egt-logo-pic" />
-            <image src="egt-office-pic" />
+            <images>
+                <image src="egt-logo-pic" />
+                <image src="egt-office-pic" />
+            </images>
         </company>
         <company id="company2" region="region1">
             <name>SAP Labs Bulgaria</name>
             <industry>Корпоративен софтуер</industry>
-            <establishmentYearOfFirstOfficeInTheCity>2006<establishmentYearOfFirstOfficeInTheCity>
+            <establishmentYearOfFirstOfficeInTheCity>2006</establishmentYearOfFirstOfficeInTheCity>
             <numberOfEmployeesInTheCity>1500</numberOfEmployeesInTheCity>
             <address>ул. Сребърна 16, София</address>
-            <establishmentGlobal>1972</establishmentGlobal>
+            <establishmentYearGlobal>1972</establishmentYearGlobal>
             <numberOfEmployeesGlobal>107000</numberOfEmployeesGlobal>
             <centralOffice>Валдорф, Германия</centralOffice>
             <programmingLanguages>
@@ -70,16 +73,18 @@
                 <product>SAP SuccessFactors</product>
                 <product>SAP Ariba</product>
             </products>
-            <image src="sap-logo-pic" />
-            <image src="sap-office-pic" />
+            <images>
+                <image src="sap-logo-pic" />
+                <image src="sap-office-pic" />
+            </images>
         </company>
         <company id="company3" region="region1">
             <name>Amusnet</name>
             <industry>Гейминг софтуер</industry>
-            establishmentYearOfFirstOfficeInTheCity>2012<establishmentYearOfFirstOfficeInTheCity>
+            <establishmentYearOfFirstOfficeInTheCity>2012</establishmentYearOfFirstOfficeInTheCity>
             <numberOfEmployeesInTheCity>400</numberOfEmployeesInTheCity>
             <address>бул. Цар Освободител 12, София</address>
-            <establishmentGlobal>2008</establishmentGlobal>
+            <establishmentYearGlobal>2008</establishmentYearGlobal>
             <numberOfEmployeesGlobal>800</numberOfEmployeesGlobal>
             <centralOffice>София</centralOffice>
             <programmingLanguages>
@@ -90,16 +95,18 @@
                 <product>Гейминг платформи</product>
                 <product>Казино софтуер</product>
             </products>
-            <image src="amusnet-logo-pic" />
-            <image src="amusnet-office-pic" />
+            <images>
+                <image src="amusnet-logo-pic" />
+                <image src="amusnet-office-pic" />
+            </images>
         </company>
         <company id="company4" region="region2">
             <name>ScaleFocus</name>
             <industry>Разработка на софтуер и ИТ услуги</industry>
-            establishmentYearOfFirstOfficeInTheCity>2018<establishmentYearOfFirstOfficeInTheCity>
+            <establishmentYearOfFirstOfficeInTheCity>2018</establishmentYearOfFirstOfficeInTheCity>
             <numberOfEmployeesInTheCity>80</numberOfEmployeesInTheCity>
             <address>ул. Васил Левски 24, Пловдив, България</address>
-            <establishmentGlobal>2012</establishmentGlobal>
+            <establishmentYearGlobal>2012</establishmentYearGlobal>
             <numberOfEmployeesGlobal>900</numberOfEmployeesGlobal>
             <centralOffice>София</centralOffice>
             <programmingLanguages>
@@ -114,16 +121,18 @@
                 <product>Услуги за облачни технологии</product>
                 <product>Мобилни и веб приложения</product>
             </products>
-            <image src="scaleFocus-logo-pic" />
-            <image src="scaleFocus-office-pic" />
+            <images>
+                <image src="scaleFocus-logo-pic" />
+                <image src="scaleFocus-office-pic" />
+            </images>
         </company>
         <company id="company5" region="region2">
             <name>Mentormate</name>
             <industry>Софтуерни услуги</industry>
-            establishmentYearOfFirstOfficeInTheCity>2014<establishmentYearOfFirstOfficeInTheCity>
+            <establishmentYearOfFirstOfficeInTheCity>2014</establishmentYearOfFirstOfficeInTheCity>
             <numberOfEmployeesInTheCity>150</numberOfEmployeesInTheCity>
             <address>ул. Иван Вазов 21, Пловдив</address>
-            <establishmentGlobal>2001</establishmentGlobal>
+            <establishmentYearGlobal>2001</establishmentYearGlobal>
             <numberOfEmployeesGlobal>600</numberOfEmployeesGlobal>
             <centralOffice>Минесота, САЩ</centralOffice>
             <programmingLanguages>
@@ -134,16 +143,18 @@
                 <product>Уеб приложения</product>
                 <product>Мобилни приложения</product>
             </products>
-            <image src="mentormate-logo-pic" />
-            <image src="mentormate-office-pic" />
+            <images>
+                <image src="mentormate-logo-pic" />
+                <image src="mentormate-office-pic" />
+            </images>
         </company>
         <company id="company6" region="region4">
             <name>ICT Strypes</name>
             <industry>ИТ услуги и аутсорсинг</industry>
-            establishmentYearOfFirstOfficeInTheCity>2021<establishmentYearOfFirstOfficeInTheCity>
+            <establishmentYearOfFirstOfficeInTheCity>2021</establishmentYearOfFirstOfficeInTheCity>
             <numberOfEmployeesInTheCity>100</numberOfEmployeesInTheCity>
             <address>ул. Владислав Варненчик 120, Варна</address>
-            <establishmentGlobal>1997</establishmentGlobal>
+            <establishmentYearGlobal>1997</establishmentYearGlobal>
             <numberOfEmployeesGlobal>500</numberOfEmployeesGlobal>
             <centralOffice>Варна, България</centralOffice>
             <programmingLanguages>
@@ -154,15 +165,17 @@
                 <product>ИТ услуги</product>
                 <product>Софтуерни решения</product>
             </products>
-            <image src="strypes-logo-pic" />
+            <images>
+                <image src="strypes-logo-pic" />
+            </images>
         </company>
-        <company id="company7" region="region5">
+        <company id="company7" region="region4">
             <name>TechnoLogica</name>
             <industry>ИТ консултации и разработки</industry>
-            establishmentYearOfFirstOfficeInTheCity>2013<establishmentYearOfFirstOfficeInTheCity>
+            <establishmentYearOfFirstOfficeInTheCity>2013</establishmentYearOfFirstOfficeInTheCity>
             <numberOfEmployeesInTheCity>50</numberOfEmployeesInTheCity>
             <address>ул. Богориди 5, Бургас</address>
-             <establishmentGlobal>1990</establishmentGlobal>
+             <establishmentYearGlobal>1990</establishmentYearGlobal>
             <numberOfEmployeesGlobal>400</numberOfEmployeesGlobal>
             <centralOffice>София, България</centralOffice>
             <programmingLanguages>
@@ -173,7 +186,9 @@
                 <product>Корпоративен софтуер</product>
                 <product>ИТ консултации</product>
             </products>
-            <image src="technoLogica-logo-pic" />
+            <images>
+                <image src="technoLogica-logo-pic" />
+            </images>
         </company>
     </companies>
 
