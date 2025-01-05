@@ -3,7 +3,7 @@
 <!DOCTYPE catalogue [
 <!NOTATION png PUBLIC "image/png">
 <!NOTATION jpg PUBLIC "image/jpeg">
-<!ENTITY egt-office-pic PUBLIC "egt-office-pic-identifier" "https://www.egt.com/wp-content/uploads/2022/09/egt-single-post.jpg" NDATA jpg>
+<!ENTITY egt-office-pic PUBLIC "egt-office-pic-identifier" "https://digitalk.bg/shimg/zx952y526_4381275.jpg" NDATA jpg>
 <!ENTITY egt-logo-pic PUBLIC "egt-logo-pic-identifier" "https://insider.egt.com/wp-content/uploads/images/logo_egt.png" NDATA png>
 
 <!ENTITY sap-office-pic PUBLIC "sap-office-pic-identifier" "https://agcapital.bg/wp-content/uploads/2020/03/VIP_2507.jpg" NDATA jpg>
