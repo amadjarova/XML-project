@@ -21,6 +21,12 @@
 <!ENTITY strypes-logo-pic PUBLIC "strypes-logo-pic-identifier" "https://jobs.ict.eu/sites/werkenbij/files/images/STRYPES_CLEAN_RGB.png" NDATA png>
 
 <!ENTITY technoLogica-logo-pic PUBLIC "technoLogica-logo-pic-identifier" "https://technologica.de/wp-content/uploads/2020/03/technologica-logo-800.png" NDATA png>
+
+<!ENTITY tokwise-office-pic PUBLIC "tokwise-office-pic-identifier" "https://static.wixstatic.com/media/b3e445_ca3f003b92e24d72a71f53067a634359~mv2.jpg/v1/fill/w_600,h_400,al_c/b3e445_ca3f003b92e24d72a71f53067a634359~mv2.jpg" NDATA jpg>
+<!ENTITY tokwise-logo-pic PUBLIC "tokwise-logo-pic-identifier" "https://assets.jobs.bg/assets/company_photo/cover/2024-03-12/resized/2048_39b7981f27a6a5c49a894407fd158c16.png" NDATA png>
+
+<!ENTITY digitallights-office-pic PUBLIC "digitallights-office-pic-identifier" "https://lights.digital/wpsite/wp-content/uploads/2023/01/dl_space_mobile.png" NDATA jpg>
+<!ENTITY digitallights-logo-pic PUBLIC "digitallights-logo-pic-identifier" "https://lights.digital/wpsite/wp-content/uploads/2024/06/DigitalLights_Wiser_logo_for_light_bkgr_retina_210x156.svg" NDATA jpg>
 ]>
 
 <catalogue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ITCompaniesSchema.xsd">
@@ -31,7 +37,7 @@
             <industry>Гейминг софтуер</industry>
             <establishmentYearOfFirstOfficeInTheCity>2017</establishmentYearOfFirstOfficeInTheCity>
             <numberOfEmployeesInTheCity>200</numberOfEmployeesInTheCity>
-            <address>ул. Александър Малинов 85, София</address>
+            <address>бул. Александър Малинов 85, София</address>
             <establishmentYearGlobal>2002</establishmentYearGlobal>
             <numberOfEmployeesGlobal>1000</numberOfEmployeesGlobal>
             <centralOffice>София, България</centralOffice>
@@ -188,6 +194,49 @@
             </products>
             <images>
                 <image src="technoLogica-logo-pic" />
+            </images>
+        </company>
+        <company id="company8" region="region1">
+            <name>TokWise</name>
+            <industry>Софтуерни услуги за енергийна индустрия</industry>
+            <establishmentYearOfFirstOfficeInTheCity>2019</establishmentYearOfFirstOfficeInTheCity>
+            <numberOfEmployeesInTheCity>15</numberOfEmployeesInTheCity>
+            <address>бул. Александър Малинов 31, София</address>
+            <establishmentYearGlobal>2018</establishmentYearGlobal>
+            <numberOfEmployeesGlobal>20</numberOfEmployeesGlobal>
+            <centralOffice>София</centralOffice>
+            <programmingLanguages>
+                <programmingLanguage ref="lang11"/>
+                <programmingLanguage ref="lang2"/>
+            </programmingLanguages>
+            <products>
+                <product>Платофрма за управляване на портфолио от възобновяеми източници</product>
+            </products>
+            <images>
+                <image src="tokwise-logo-pic" />
+                <image src="tokwise-office-pic" />
+            </images>
+        </company>
+        <company id="company9" region="region1">
+            <name>Digital Lights</name>
+            <industry>ИТ услуги</industry>
+            <establishmentYearOfFirstOfficeInTheCity>2018</establishmentYearOfFirstOfficeInTheCity>
+            <numberOfEmployeesInTheCity>100</numberOfEmployeesInTheCity>
+            <address>бул. Александър Малинов 31, София</address>
+            <establishmentYearGlobal>2018</establishmentYearGlobal>
+            <numberOfEmployeesGlobal>150</numberOfEmployeesGlobal>
+            <centralOffice>София</centralOffice>
+            <programmingLanguages>
+                <programmingLanguage ref="lang1"/>
+                <programmingLanguage ref="lang2"/>
+                <programmingLanguage ref="lang3"/>
+            </programmingLanguages>
+            <products>
+                <product>Софтуерни решения</product>
+            </products>
+            <images>
+                <image src="digitallights-logo-pic" />
+                <image src="digitallights-office-pic" />
             </images>
         </company>
     </companies>
