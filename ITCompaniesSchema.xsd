@@ -32,7 +32,7 @@
 
         <xs:keyref name="companyRegionRef" refer="regionIDKey">
             <xs:selector xpath="companies/company" />
-            <xs:field xpath="@ref" />
+            <xs:field xpath="@region" />
         </xs:keyref>
     </xs:element>
 
