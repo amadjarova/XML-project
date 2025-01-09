@@ -64,7 +64,7 @@
             <xs:element name="establishmentYearGlobal" type="yearType"/>
             <xs:element name="numberOfEmployeesGlobal" type="xs:int"/>
             <xs:element name="centralOffice" type="xs:string"/>
-            <xs:element name="programmingLanguages" type="companyProgrammingLanguagesType" />
+            <xs:element name="companyProgrammingLanguages" type="companyProgrammingLanguagesType" />
             <xs:element name="products" type="companyProductsType" />
             <xs:element name="images" type="companyImagesType" />
         </xs:sequence>
@@ -74,7 +74,7 @@
 
     <xs:complexType name="companyProgrammingLanguagesType">
         <xs:sequence>
-            <xs:element name="programmingLanguage" maxOccurs="unbounded">
+            <xs:element name="companyProgrammingLanguage" maxOccurs="unbounded">
                 <xs:complexType>
                     <xs:attribute name="ref" type="xs:IDREF" use="required" />
                 </xs:complexType>
@@ -116,7 +116,7 @@
 
     <xs:complexType name="programmingLanguageType">
         <xs:sequence>
-            <xs:element name="name" type="xs:string"/>
+            <xs:element name="languageName" type="xs:string"/>
             <xs:element name="mainUsage" type="xs:string"/>
             <xs:element name="yearOfCreation" type="yearType"/>
         </xs:sequence>

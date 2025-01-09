@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="ITCompanies.xsl" type="text/xsl"?>
-<!DOCTYPE catalogue [
+<!DOCTYPE catalogue SYSTEM "ITCompanies.dtd" [
+
 <!NOTATION png PUBLIC "image/png">
 <!NOTATION jpg PUBLIC "image/jpeg">
+
 <!ENTITY egt-office-pic PUBLIC "egt-office-pic-identifier" "https://digitalk.bg/shimg/zx952y526_4381275.jpg" NDATA jpg>
 <!ENTITY egt-logo-pic PUBLIC "egt-logo-pic-identifier" "https://insider.egt.com/wp-content/uploads/images/logo_egt.png" NDATA png>
 
@@ -27,10 +29,11 @@
 
 <!ENTITY digitallights-office-pic PUBLIC "digitallights-office-pic-identifier" "https://lights.digital/wpsite/wp-content/uploads/2023/01/dl_space_mobile.png" NDATA jpg>
 <!ENTITY digitallights-logo-pic PUBLIC "digitallights-logo-pic-identifier" "https://lights.digital/wpsite/wp-content/uploads/2024/06/DigitalLights_Wiser_logo_for_light_bkgr_retina_210x156.svg" NDATA jpg>
+
+<!ATTLIST catalogue xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation CDATA #FIXED "ITCompaniesSchema.xsd">
 ]>
 
-<catalogue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ITCompaniesSchema.xsd">
-
+<catalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ITCompaniesSchema.xsd">
     <companies>
         <company id="company1" region="region1">
             <name>EGT Digital</name>
@@ -41,12 +44,12 @@
             <establishmentYearGlobal>2002</establishmentYearGlobal>
             <numberOfEmployeesGlobal>1000</numberOfEmployeesGlobal>
             <centralOffice>София, България</centralOffice>
-            <programmingLanguages>
-                <programmingLanguage ref="lang1"/>
-                <programmingLanguage ref="lang2"/>
-                <programmingLanguage ref="lang3"/>
-                <programmingLanguage ref="lang4"/>
-            </programmingLanguages>
+            <companyProgrammingLanguages>
+                <companyProgrammingLanguage ref="lang1"/>
+                <companyProgrammingLanguage ref="lang2"/>
+                <companyProgrammingLanguage ref="lang3"/>
+                <companyProgrammingLanguage ref="lang4"/>
+            </companyProgrammingLanguages>
             <products>
                 <product>Казино платформи</product>
                 <product>Гейминг софтуер</product>
@@ -65,14 +68,14 @@
             <establishmentYearGlobal>1972</establishmentYearGlobal>
             <numberOfEmployeesGlobal>107000</numberOfEmployeesGlobal>
             <centralOffice>Валдорф, Германия</centralOffice>
-            <programmingLanguages>
-                <programmingLanguage ref="lang5"/>
-                <programmingLanguage ref="lang3"/>
-                <programmingLanguage ref="lang6"/>
-                <programmingLanguage ref="lang1"/>
-                <programmingLanguage ref="lang2"/>
-                <programmingLanguage ref="lang4"/>
-            </programmingLanguages>
+            <companyProgrammingLanguages>
+                <companyProgrammingLanguage ref="lang5"/>
+                <companyProgrammingLanguage ref="lang3"/>
+                <companyProgrammingLanguage ref="lang6"/>
+                <companyProgrammingLanguage ref="lang1"/>
+                <companyProgrammingLanguage ref="lang2"/>
+                <companyProgrammingLanguage ref="lang4"/>
+            </companyProgrammingLanguages>
             <products>
                 <product>SAP S/4HANA</product>
                 <product>SAP Business Technology Platform</product>
@@ -93,10 +96,10 @@
             <establishmentYearGlobal>2008</establishmentYearGlobal>
             <numberOfEmployeesGlobal>800</numberOfEmployeesGlobal>
             <centralOffice>София</centralOffice>
-            <programmingLanguages>
-                <programmingLanguage ref="lang7"/>
-                <programmingLanguage ref="lang4"/>
-            </programmingLanguages>
+            <companyProgrammingLanguages>
+                <companyProgrammingLanguage ref="lang7"/>
+                <companyProgrammingLanguage ref="lang4"/>
+            </companyProgrammingLanguages>
             <products>
                 <product>Гейминг платформи</product>
                 <product>Казино софтуер</product>
@@ -115,13 +118,13 @@
             <establishmentYearGlobal>2012</establishmentYearGlobal>
             <numberOfEmployeesGlobal>900</numberOfEmployeesGlobal>
             <centralOffice>София</centralOffice>
-            <programmingLanguages>
-                <programmingLanguage ref="lang3"/>
-                <programmingLanguage ref="lang8"/>
-                <programmingLanguage ref="lang2"/>
-                <programmingLanguage ref="lang4"/>
-                <programmingLanguage ref="lang9"/>
-            </programmingLanguages>
+            <companyProgrammingLanguages>
+                <companyProgrammingLanguage ref="lang3"/>
+                <companyProgrammingLanguage ref="lang8"/>
+                <companyProgrammingLanguage ref="lang2"/>
+                <companyProgrammingLanguage ref="lang4"/>
+                <companyProgrammingLanguage ref="lang9"/>
+            </companyProgrammingLanguages>
             <products>
                 <product>Софтуерни решения за автоматизация</product>
                 <product>Услуги за облачни технологии</product>
@@ -141,10 +144,10 @@
             <establishmentYearGlobal>2001</establishmentYearGlobal>
             <numberOfEmployeesGlobal>600</numberOfEmployeesGlobal>
             <centralOffice>Минесота, САЩ</centralOffice>
-            <programmingLanguages>
-                <programmingLanguage ref="lang10"/>
-                <programmingLanguage ref="lang11"/>
-            </programmingLanguages>
+            <companyProgrammingLanguages>
+                <companyProgrammingLanguage ref="lang10"/>
+                <companyProgrammingLanguage ref="lang11"/>
+            </companyProgrammingLanguages>
             <products>
                 <product>Уеб приложения</product>
                 <product>Мобилни приложения</product>
@@ -163,10 +166,10 @@
             <establishmentYearGlobal>1997</establishmentYearGlobal>
             <numberOfEmployeesGlobal>500</numberOfEmployeesGlobal>
             <centralOffice>Варна, България</centralOffice>
-            <programmingLanguages>
-                <programmingLanguage ref="lang1"/>
-                <programmingLanguage ref="lang2"/>
-            </programmingLanguages>
+            <companyProgrammingLanguages>
+                <companyProgrammingLanguage ref="lang1"/>
+                <companyProgrammingLanguage ref="lang2"/>
+            </companyProgrammingLanguages>
             <products>
                 <product>ИТ услуги</product>
                 <product>Софтуерни решения</product>
@@ -184,10 +187,10 @@
              <establishmentYearGlobal>1990</establishmentYearGlobal>
             <numberOfEmployeesGlobal>400</numberOfEmployeesGlobal>
             <centralOffice>София, България</centralOffice>
-            <programmingLanguages>
-                <programmingLanguage ref="lang3"/>
-                <programmingLanguage ref="lang8"/>
-            </programmingLanguages>
+            <companyProgrammingLanguages>
+                <companyProgrammingLanguage ref="lang3"/>
+                <companyProgrammingLanguage ref="lang8"/>
+            </companyProgrammingLanguages>
             <products>
                 <product>Корпоративен софтуер</product>
                 <product>ИТ консултации</product>
@@ -205,10 +208,10 @@
             <establishmentYearGlobal>2018</establishmentYearGlobal>
             <numberOfEmployeesGlobal>20</numberOfEmployeesGlobal>
             <centralOffice>София</centralOffice>
-            <programmingLanguages>
-                <programmingLanguage ref="lang11"/>
-                <programmingLanguage ref="lang2"/>
-            </programmingLanguages>
+            <companyProgrammingLanguages>
+                <companyProgrammingLanguage ref="lang11"/>
+                <companyProgrammingLanguage ref="lang2"/>
+            </companyProgrammingLanguages>
             <products>
                 <product>Платофрма за управляване на портфолио от възобновяеми източници</product>
             </products>
@@ -226,11 +229,11 @@
             <establishmentYearGlobal>2018</establishmentYearGlobal>
             <numberOfEmployeesGlobal>150</numberOfEmployeesGlobal>
             <centralOffice>София</centralOffice>
-            <programmingLanguages>
-                <programmingLanguage ref="lang1"/>
-                <programmingLanguage ref="lang2"/>
-                <programmingLanguage ref="lang3"/>
-            </programmingLanguages>
+            <companyProgrammingLanguages>
+                <companyProgrammingLanguage ref="lang1"/>
+                <companyProgrammingLanguage ref="lang2"/>
+                <companyProgrammingLanguage ref="lang3"/>
+            </companyProgrammingLanguages>
             <products>
                 <product>Софтуерни решения</product>
             </products>
@@ -266,57 +269,57 @@
 
     <programmingLanguages>
         <programmingLanguage id="lang1">
-            <name>C++</name>
+            <languageName>C++</languageName>
             <mainUsage>Системно програмиране, разработка на игри, приложения с висока производителност</mainUsage>
             <yearOfCreation>1983</yearOfCreation>
         </programmingLanguage>
         <programmingLanguage id="lang2">
-            <name>Python</name>
+            <languageName>Python</languageName>
             <mainUsage>Уеб разработка, анализ на данни, изкуствен интелект, скриптове</mainUsage>
             <yearOfCreation>1991</yearOfCreation>
         </programmingLanguage>
         <programmingLanguage id="lang3">
-            <name>Java</name>
+            <languageName>Java</languageName>
             <mainUsage>Корпоративни приложения, мобилна разработка, бекенд системи</mainUsage>
             <yearOfCreation>1995</yearOfCreation>
         </programmingLanguage>
         <programmingLanguage id="lang4">
-            <name>JavaScript</name>
+            <languageName>JavaScript</languageName>
             <mainUsage>Уеб разработка, фронтенд и бекенд скриптове</mainUsage>
             <yearOfCreation>1995</yearOfCreation>
         </programmingLanguage>
         <programmingLanguage id="lang5">
-            <name>ABAP</name>
+            <languageName>ABAP</languageName>
             <mainUsage>Софтуер за планиране на корпоративни ресурси (ERP)</mainUsage>
             <yearOfCreation>1983</yearOfCreation>
         </programmingLanguage>
         <programmingLanguage id="lang6">
-            <name>Go</name>
+            <languageName>Go</languageName>
             <mainUsage>Облачни услуги, разпределени системи, микросервизи</mainUsage>
             <yearOfCreation>2009</yearOfCreation>
         </programmingLanguage>
         <programmingLanguage id="lang7">
-            <name>PHP</name>
+            <languageName>PHP</languageName>
             <mainUsage>Уеб разработка, сървърни скриптове</mainUsage>
             <yearOfCreation>1995</yearOfCreation>
         </programmingLanguage>
         <programmingLanguage id="lang8">
-            <name>C#</name>
+            <languageName>C#</languageName>
             <mainUsage>Десктоп приложения, разработка на игри, корпоративен софтуер</mainUsage>
             <yearOfCreation>2000</yearOfCreation>
         </programmingLanguage>
         <programmingLanguage id="lang9">
-            <name>Ruby</name>
+            <languageName>Ruby</languageName>
             <mainUsage>Уеб разработка, скриптове</mainUsage>
             <yearOfCreation>1995</yearOfCreation>
         </programmingLanguage>
         <programmingLanguage id="lang10">
-            <name>React</name>
+            <languageName>React</languageName>
             <mainUsage>Фронтенд уеб разработка, създаване на UI компоненти</mainUsage>
             <yearOfCreation>2013</yearOfCreation>
         </programmingLanguage>
         <programmingLanguage id="lang11">
-            <name>.NET</name>
+            <languageName>.NET</languageName>
             <mainUsage>Корпоративни приложения, облачни услуги, десктоп приложения</mainUsage>
             <yearOfCreation>2002</yearOfCreation>
         </programmingLanguage>

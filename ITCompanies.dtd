@@ -1,0 +1,37 @@
+<!ELEMENT catalogue (companies, regions, programmingLanguages)>
+
+<!ELEMENT companies (company+)>
+<!ELEMENT company (name, industry, establishmentYearOfFirstOfficeInTheCity, numberOfEmployeesInTheCity, address, establishmentYearGlobal, numberOfEmployeesGlobal, centralOffice, companyProgrammingLanguages, products, images)>
+<!ATTLIST company id ID #REQUIRED>
+<!ATTLIST company region IDREF #REQUIRED>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT industry (#PCDATA)>
+<!ELEMENT establishmentYearOfFirstOfficeInTheCity (#PCDATA)>
+<!ELEMENT numberOfEmployeesInTheCity (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT establishmentYearGlobal (#PCDATA)>
+<!ELEMENT numberOfEmployeesGlobal (#PCDATA)>
+<!ELEMENT centralOffice (#PCDATA)>
+<!ELEMENT companyProgrammingLanguages (companyProgrammingLanguage+)>
+<!ELEMENT companyProgrammingLanguage EMPTY>
+<!ATTLIST companyProgrammingLanguage ref IDREF #REQUIRED>
+<!ELEMENT products (product+)>
+<!ELEMENT product (#PCDATA)>
+<!ELEMENT images (image+)>
+<!ELEMENT image EMPTY>
+<!ATTLIST image src CDATA #REQUIRED>
+
+<!ELEMENT regions (region+)>
+<!ELEMENT region (country, municipality, city)>
+<!ATTLIST region id ID #REQUIRED>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT municipality (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+
+<!ELEMENT programmingLanguages (programmingLanguage+)>
+<!ELEMENT programmingLanguage (languageName, mainUsage, yearOfCreation)>
+<!ATTLIST programmingLanguage id ID #REQUIRED>
+<!ELEMENT languageName (#PCDATA)>
+<!ELEMENT mainUsage (#PCDATA)>
+<!ELEMENT yearOfCreation (#PCDATA)>

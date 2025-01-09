@@ -118,9 +118,9 @@
 
                             <h3>Програмни езици:</h3>
                             <ul>
-                                <xsl:for-each select="programmingLanguages/programmingLanguage">
+                                <xsl:for-each select="companyProgrammingLanguages/companyProgrammingLanguage">
                                     <li>
-                                        <xsl:value-of select="key('languageById', @ref)/name" />
+                                        <xsl:value-of select="key('languageById', @ref)/languageName" />
                                         <button class="show-more">Покажи допълнителна информация</button>
                                         <div class="language-details">
                                             <p><strong>Използва се основно за:</strong> <xsl:value-of select="key('languageById', @ref)/mainUsage" /></p>
