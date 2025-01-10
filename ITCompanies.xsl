@@ -118,47 +118,53 @@
 
                             <h3>Програмни езици:</h3>
                             <ul>
-                                <xsl:for-each select="companyProgrammingLanguages/companyProgrammingLanguage">
-                                    <li>
-                                        <xsl:value-of select="key('languageById', @ref)/languageName" />
-                                        <button class="show-more">Покажи допълнителна информация</button>
-                                        <div class="language-details">
-                                            <p><strong>Използва се основно за:</strong> <xsl:value-of select="key('languageById', @ref)/mainUsage" /></p>
-                                            <p><strong>Година на създаване:</strong> <xsl:value-of select="key('languageById', @ref)/yearOfCreation" /></p>
-                                        </div>
-                                    </li>
-                                </xsl:for-each>
+                                <xsl:apply-templates select="companyProgrammingLanguages/companyProgrammingLanguage" />
                             </ul>
 
                             <h3>Продукти:</h3>
                             <ul>
-                                <xsl:for-each select="products/product">
-                                    <li><xsl:value-of select="." /></li>
-                                </xsl:for-each>
+                                <xsl:apply-templates select="products/product" />
                             </ul>
 
                             <h3>Изображения:</h3>
                             <div class="images">
-                                <xsl:for-each select="images/image">
-                                    <xsl:choose>
-                                        <xsl:when test="@src">
-                                            <img>
-                                                <xsl:attribute name="src">
-                                                    <xsl:value-of select="unparsed-entity-uri(@src)" />
-                                                </xsl:attribute>
-                                            </img>
-                                        </xsl:when>
-                                        <xsl:otherwise>
-                                            <p>Изображението не е налично.</p>
-                                        </xsl:otherwise>
-                                    </xsl:choose>
-                                </xsl:for-each>
+                                <xsl:apply-templates select="images/image" />
                             </div>
-
                         </div>
                     </xsl:for-each>
                 </div>
             </body>
         </html>
+    </xsl:template>
+
+    <!-- Нови темплейти -->
+    <xsl:template match="companyProgrammingLanguages/companyProgrammingLanguage">
+        <li>
+            <xsl:value-of select="key('languageById', @ref)/languageName" />
+            <button class="show-more">Покажи допълнителна информация</button>
+            <div class="language-details">
+                <p><strong>Използва се основно за:</strong> <xsl:value-of select="key('languageById', @ref)/mainUsage" /></p>
+                <p><strong>Година на създаване:</strong> <xsl:value-of select="key('languageById', @ref)/yearOfCreation" /></p>
+            </div>
+        </li>
+    </xsl:template>
+
+    <xsl:template match="products/product">
+        <li><xsl:value-of select="." /></li>
+    </xsl:template>
+
+    <xsl:template match="images/image">
+        <xsl:choose>
+            <xsl:when test="@src">
+                <img>
+                    <xsl:attribute name="src">
+                        <xsl:value-of select="unparsed-entity-uri(@src)" />
+                    </xsl:attribute>
+                </img>
+            </xsl:when>
+            <xsl:otherwise>
+                <p>Изображението не е налично.</p>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
 </xsl:stylesheet>
