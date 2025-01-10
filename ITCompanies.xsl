@@ -137,7 +137,6 @@
         </html>
     </xsl:template>
 
-    <!-- Нови темплейти -->
     <xsl:template match="companyProgrammingLanguages/companyProgrammingLanguage">
         <li>
             <xsl:value-of select="key('languageById', @ref)/languageName" />
